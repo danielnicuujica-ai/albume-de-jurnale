@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albume de Jurnale — Ghid Sezon Rece, Bloguri & Întrebări</title>
+
+<style>
+    :root {
+      --bg: #eef2ee;
+      --surface: #ffffff;
+      --surface-alt: #f5f8f5;
+      --text: #1f2933;
+      --muted: #4b5563;
+      --border: #dce4de;
+      --primary: #245c34;
+      --primary-hover: #194225;
+      --primary-soft: #e9f3ec;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --header-grad: linear-gradient(135deg, #1b4a29 0%, #2d6a3e 100%);
+      --header-text: #ffffff;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+    }
+.banner-sus {
+      width: 100%;
+      max-height: 200px; /* Îl ține subțire și elegant */
+      object-fit: cover; /* Împiedică deformarea imaginii */
+      object-position: center;
+      border-radius: 8px; /* Îi rotunjește ușor colțurile */
+      border: 2px solid var(--border);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    body.tema-luminos {
+      --bg: #f4f6f9;
+      --surface: #ffffff;
+      --surface-alt: #f8fafc;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #e5e7eb;
+      --primary: #1e40af;
+      --primary-hover: #1e3a8a;
+      --primary-soft: #eff6ff;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --header-grad: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      --header-text: #ffffff;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    body.tema-seara {
+      --bg: #111613;
+      --surface: #1a221d;
+      --surface-alt: #222c26;
+      --text: #edf2ee;
+      --muted: #b2bfb6;
+      --border: #2f3d34;
+      --primary: #3b8c52;
+      --primary-hover: #4aa363;
+      --primary-soft: #202d24;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --header-grad: linear-gradient(135deg, #122618 0%, #1d3b26 100%);
+      --header-text: #f3f7f4;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    body.tema-cosmetica {
+      --bg: #fbf5f6;
+      --surface: #ffffff;
+      --surface-alt: #fdf8f9;
+      --text: #2a1820;
+      --muted: #6b4e5a;
+      --border: #f0dce2;
+      --primary: #9d3b5c;
+      --primary-hover: #7d2c48;
+      --primary-soft: #fceef2;
+      --accent: #c2593f;
+      --accent-hover: #9e432d;
+      --header-grad: linear-gradient(135deg, #7d2c48 0%, #a84264 100%);
+      --header-text: #ffffff;
+      --shadow: 0 8px 24px rgba(125, 44, 72, 0.07);
+    }
+
+    body.tema-lemn {
+      --bg: #f5efe8;
+      --surface: #fffdf9;
+      --surface-alt: #f8f2ea;
+      --text: #291d14;
+      --muted: #5c493b;
+      --border: #e4d5c3;
+      --primary: #6b4226;
+      --primary-hover: #52311a;
+      --primary-soft: #f5ece2;
+      --accent: #c86d19;
+      --accent-hover: #a3550e;
+      --header-grad: linear-gradient(135deg, #4a2c18 0%, #734729 100%);
+      --header-text: #fffaf5;
+      --shadow: 0 8px 24px rgba(74, 44, 24, 0.07);
+    }
+
+    body.tema-pin {
+      --bg: #eef5f4;
+      --surface: #ffffff;
+      --surface-alt: #f4f9f8;
+      --text: #152625;
+      --muted: #46615f;
+      --border: #d2e4e2;
+      --primary: #1b6b63;
+      --primary-hover: #13524b;
+      --primary-soft: #e6f4f2;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --header-grad: linear-gradient(135deg, #134e4a 0%, #1f7a70 100%);
+      --header-text: #ffffff;
+      --shadow: 0 8px 24px rgba(19, 78, 74, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    header {
+      background: var(--header-grad);
+      color: var(--header-text);
+      padding: 32px 18px 28px;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .marca {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-color: rgba(255, 255, 255, 0.16);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .teme-grup {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .btn-tema {
+      background-color: rgba(255, 255, 255, 0.16);
+      color: var(--header-text);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+
+    .btn-tema:hover,
+    .btn-tema.activ {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    header h1 {
+      margin: 6px 0 8px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    header p.descriere-header {
+      margin: 0;
+      max-width: 680px;
+      font-size: 15px;
+      opacity: 0.95;
+    }
+
+    .bara-bloguri {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn-blog {
+      background-color: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 9px 15px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+    }
+
+    .btn-blog:hover {
+      border-color: var(--accent);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 26px auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    .subtitlu {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .butoane {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    button.optiune {
+      background-color: var(--surface-alt);
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      padding: 12px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+      transition: all 0.15s ease;
+    }
+
+    button.optiune:hover {
+      border-color: var(--primary);
+      background-color: var(--primary-soft);
+    }
+
+    .rezultat {
+      background-color: var(--primary-soft);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 8px;
+    }
+
+    .rezultat h3 {
+      margin: 0 0 6px;
+      font-size: 17.5px;
+    }
+
+    .rezultat p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .link-oferta {
+      display: inline-block;
+      margin-top: 12px;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .link-oferta:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .grid-doua-coloane {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    details.faq-item {
+      background-color: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+    }
+
+    details.faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+
+    details.faq-item p {
+      margin: 8px 0 2px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .form-intrebare label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-intrebare input,
+    .form-intrebare textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background-color: var(--surface-alt);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .btn-trimite {
+      background-color: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-trimite:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .raspuns-intrebare {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background-color: var(--primary-soft);
+      border: 1px solid var(--border);
+      font-size: 14px;
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      padding: 8px 16px 34px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+.box-servicii {
+      background-color: var(--primary-soft);
+      border: 2px solid var(--accent);
+      border-left: 6px solid var(--accent);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+
+    .box-servicii h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .box-servicii p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--text);
+    }
+
+    .box-servicii .link-oferta {
+      display: inline-block;
+      font-size: 16px;
+      padding: 12px 20px;
+      margin-top: 14px;
+    }
+  .link-secundar {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .link-secundar:hover {
+    text-decoration: underline;
+  }
+  </style>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+      <div class="top-bar">
+        <div class="marca">Albume de Jurnale</div>
+        <div class="teme-grup" id="lista-teme">
+          <span>Temă:</span>
+        </div>
+      </div>
+
+      <img src="banner-albume.jpg" alt="Albume de Jurnale" class="banner-sus">
+
+      <h1>Ghid de Sezon Rece: Îngrijire Personală și Igienă & Grădinărit și Unelte</h1>
+      <p class="descriere-header">Recomandări practice pentru îngrijirea corporală, a tenului și igiena zilnică pe timp de iarnă, alături de sfaturi utile pentru grădinărit, curte și alegerea uneltelor potrivite.</p>
+
+      <div class="bara-bloguri">
+        <a class="btn-blog" href="https://ghidjurnaldeten.blogspot.com/" target="_blank" rel="noopener noreferrer">JurnalDeTen (Îngrijire)</a>
+        <a class="btn-blog" href="https://jurnaluldegradina.blogspot.com/" target="_blank" rel="noopener noreferrer">JurnalDeGrădină (Curte & Unelte)</a>
+      </div>
+      <p class="descriere-header" style="margin-top: 10px; font-size: 13.5px; opacity: 0.9;">După aceste butoane te așteaptă produsele dorite pentru îngrijire personală și igienă, cât și produse pentru îngrijirea grădinii și a uneltelor.</p>
+     </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1. Alege recomandarea potrivită</h2>
+      <p class="subtitlu">Apasă pe categoria care te interesează acum pentru a vedea sfatul scurt și oferta sau articolul asociat.</p>
+
+      <div class="butoane">
+        <button type="button" class="optiune" onclick="arataRecomandare('lemne')">Tăiat lemne și crengi</button>
+        <button type="button" class="optiune" onclick="arataRecomandare('curatenie')">Curățenie în curte și pomi</button>
+        <button type="button" class="optiune" onclick="arataRecomandare('protectie')">Protecție scule și materiale</button>
+        <button type="button" class="optiune" onclick="arataRecomandare('ten')">Îngrijire ten și mâini iarna</button>
+      </div>
+
+      <div id="zona-rezultat" class="rezultat">
+        <h3>Sfat de început</h3>
+        <p>Alege o categorie de mai sus — vei vedea o recomandare practică și linkul direct către ofertă sau blog.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Întrebări frecvente și fereastră de întrebări</h2>
+      <p class="subtitlu">Clarificări rapide despre recomandări și un loc unde poți lăsa o întrebare.</p>
+
+      <div class="grid-doua-coloane">
+        <div>
+          <details class="faq-item">
+            <summary>Plătesc ceva în plus dacă folosesc linkurile de pe pagină?</summary>
+            <p>Nu. Prețul produsului rămâne același pentru tine, iar dacă finalizezi o comandă, noi putem primi un mic comision de afiliere care susține proiectul.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Unde găsesc articole mai detaliate?</summary>
+            <p>Poți intra direct pe <strong>JurnalDeTen</strong> pentru rutine și produse de îngrijire sau pe <strong>JurnalDeGrădină</strong> pentru sfaturi și unelte de curte și grădină.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Oferiți și servicii de redactare sau introducere date?</summary>
+            <p>Da, prin secțiunea dedicată de mai jos poți ajunge direct la serviciile disponibile pe Fiverr.</p>
+          </details>
+        </div>
+
+        <form class="form-intrebare" onsubmit="trimiteIntrebare(event)">
+          <label for="nume-vizitator">Numele tău (opțional)</label>
+          <input type="text" id="nume-vizitator" placeholder="Ex: Andrei">
+
+          <label for="text-intrebare">Întrebarea ta</label>
+          <textarea id="text-intrebare" rows="3" placeholder="Ex: Ce unealtă recomanzi pentru crengi groase de 8-10 cm?" required></textarea>
+
+          <button type="submit" class="btn-trimite">Notează întrebarea</button>
+
+          <div id="raspuns-intrebare" class="raspuns-intrebare"></div>
+        </form>
+      </div>
+    </section>
+<section class="card">
+      <div class="box-servicii">
+        <h3>Servicii de introducere date, redactare și organizare documente (prin Fiverr)</h3>
+        <p><strong>Ce este Fiverr?</strong> Este o platformă online cunoscută unde poți comanda servicii punctuale, clare și bine organizate, fără bătăi de cap.</p>
+        <p style="margin-top: 8px;"><strong>Cu ce te pot ajuta concret:</strong> introducere și ordonare de date, tastare/redactare texte, formatare și curățare documente, livrate ordonat și la termen.</p>
+<a class="link-oferta" href="https://www.fiverr.com/nicudanielujica/do-professional-romanian-audio-transcription-and-typing" target="_blank" rel="noopener noreferrer">Vezi serviciul de transcriere și tastare pe Fiverr →</a>
+              </div>
+    </section>
+   </main>
+
+  <footer>
+    <p><strong>Albume DeJurnale</strong> — Pagină de prezentare și recomandări. Unele linkuri sunt de afiliere și pot genera comision fără costuri suplimentare pentru cumpărător.</p>
+  </footer>
+
+  <script>
+    const temeDisponibile = [
+      { id: 'verde', eticheta: 'Gospodărie', clasa: '' },
+      { id: 'luminos', eticheta: 'Luminos', clasa: 'tema-luminos' },
+      { id: 'seara', eticheta: 'Seară', clasa: 'tema-seara' },
+      { id: 'cosmetica', eticheta: 'Cosmetică', clasa: 'tema-cosmetica' },
+      { id: 'lemn', eticheta: 'Pământ & Lemn', clasa: 'tema-lemn' },
+      { id: 'pin', eticheta: 'Pin & Mentă', clasa: 'tema-pin' }
+    ];
+
+    function construiesteTemele() {
+      const containerTeme = document.getElementById('lista-teme');
+      const temaSalvata = localStorage.getItem('temaAlbumeDeJurnale') || 'verde';
+
+      temeDisponibile.forEach(function (tema) {
+        const buton = document.createElement('button');
+        buton.type = 'button';
+        buton.className = 'btn-tema' + (tema.id === temaSalvata ? ' activ' : '');
+        buton.textContent = tema.eticheta;
+        buton.dataset.temaId = tema.id;
+        buton.onclick = function () {
+          aplicaTema(tema.id);
+        };
+        containerTeme.appendChild(buton);
+      });
+
+      aplicaTema(temaSalvata);
+    }
+
+    function aplicaTema(idTema) {
+      const aleasa = temeDisponibile.find(function (t) { return t.id === idTema; }) || temeDisponibile[0];
+
+      document.body.className = aleasa.clasa;
+      localStorage.setItem('temaAlbumeDeJurnale', aleasa.id);
+
+      const butoane = document.querySelectorAll('.btn-tema');
+      butoane.forEach(function (btn) {
+        btn.classList.toggle('activ', btn.dataset.temaId === aleasa.id);
+      });
+    }
+
+    construiesteTemele();
+
+    function arataRecomandare(tip) {
+      const zona = document.getElementById('zona-rezultat');
+
+      if (tip === 'lemne') {
+        zona.innerHTML =
+          '<h3>Tăiat lemne și crengi</h3>' +
+          '<p>Pentru crengi și lemne subțiri din curte, o <strong>drujbiță pe acumulatori</strong> este practică, ușor de manevrat și te ajută să lucrezi rapid fără cabluri.</p>' +
+          '<a class="link-oferta" href="https://scule365.ro/cumpara/set-scule-cu-acumulator-48v-mini-drujba-electrica-foarfeca-crengi-31181?utm_campaign=2Performant&utm_source=1a6b39052&utm_medium=CPS&2pau=1a6b39052&2ptt=quicklink&2ptu=8e59c17b0&2prp=hKoxL2wj8AWDwhzi0KmVNq1Zg8aqW0eJmyglklcBlT6ovh_VznxNY9haTr7SR54mlv5JfPScEj7zWYQuwY5ahMfavTc96gFB2Wb2mhonAADBuM4UJqiNZ6nMvQUIeCxPPBBG9EP6BpPIAhcw-TFI1w&2pdlst=" target="_blank" rel="noopener noreferrer">Vezi oferta la setul cu mini-drujbă</a>';
+      } else if (tip === 'curatenie') {
+        zona.innerHTML =
+          '<h3>Curățenie în curte și toaletare pomi</h3>' +
+          '<p>Toamna târziu și în ferestrele mai blânde de iarnă, o <strong>foarfecă bună de tăiat</strong> și uneltele de bază fac curățenia mult mai ușoară.</p>' +
+          '<a class="link-oferta" href=https://www.scule365.ro/cumpara/foarfeca-gradina-electrica-cu-2-acumulatori-48v-x-8ah-pentru-gradina-30315?utm_campaign=2Performant&utm_source=1a6b39052&utm_medium=CPS&2pau=1a6b39052&2ptt=quicklink&2ptu=8e59c17b0&2prp=BVa08raOSfM5nWes5ubWWaWfBLuJNI2hX-QXk9esFqcFqJ6_cRz71rjmXdS1its-hxEsJb0fpYRfyOgUs9oAPjvlOcFIXRdfGFUZPb-lJMH6CMh5519gdq7OXazvwYQFR9HaJix8M-Sjv-MLO0s-XQ&2pdlst="_blank" rel="noopener noreferrer">Vezi recomandarea pentru foarfecă</a>';
+      } else if (tip === 'protectie') {
+        zona.innerHTML =
+          '<h3>Protecție scule și materiale</h3>' +
+          '<p>Ține lemnele, uneltele și materialele ferite de ploaie, zăpadă și umezeală cu ajutorul unei <strong>prelate / cort pavilion</strong> și al unei roabe rezistente.</p>' +
+          '<a class="link-oferta" href=https://www.infinity.ro/prelata-impermeabila-de-protectie-dimensiune-4x5m-20m2-rezistenta-la-umiditate-si-uzura-9333594/p?utm_campaign=2Performant&utm_source=1a6b39052&utm_medium=CPS&2pau=1a6b39052&2ptt=quicklink&2ptu=a11b7b0d7&2prp=IDOrrRS6iccEXwt19fPCgnecKJFHIiU1A7sSrungagWp3wCYgWQcmoPjY-g5Jv-RJDeUTaU1lup5DZmen7SEuDaJ2na6kmzii1Ub3U79A4DhWamjN6sMCAiMXlxyjx0SFKzbUazZ51d9xEHRiKmcgA&2pdlst="_blank" rel="noopener noreferrer">Vezi opțiunile de protecție și transport</a>';
+      } else if (tip === 'ten') {
+        zona.innerHTML =
+          '<h3>Îngrijire ten și mâini în sezonul rece</h3>' +
+          '<p>Aerul rece și vântul usucă pielea mai repede; o rutină simplă de hidratare și creme potrivite te ajută să păstrezi confortul pielii.</p>' +
+          '<a class="link-oferta" href="https://ghidjurnaldeten.blogspot.com/" target="_blank" rel="noopener noreferrer">Deschide JurnalDeTen pentru recomandări</a>';
+      }
+    }
+
+    function trimiteIntrebare(event) {
+      event.preventDefault();
+      const nume = document.getElementById('nume-vizitator').value.trim() || 'Vizitator';
+      const intrebare = document.getElementById('text-intrebare').value.trim();
+      const cutia = document.getElementById('raspuns-intrebare');
+
+      if (!intrebare) return;
+
+      cutia.style.display = 'block';
+      cutia.innerHTML =
+        '<strong>Mulțumim, ' + nume + '!</strong> Am preluat întrebarea ta: <em>„' + intrebare + '”</em>. ' +
+        'Între timp, poți verifica și articolele de pe <strong>JurnalDeTen</strong> sau <strong>JurnalDeGrădină</strong> pentru detalii.';
+
+      document.getElementById('text-intrebare').value = '';
+    }
+  </script>
+
+</body>
+</html>
